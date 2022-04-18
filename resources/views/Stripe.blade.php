@@ -33,10 +33,10 @@
                <div class="panel panel-default credit-card-box">
                   <div class="panel-heading display-table" >
                      <div class="row display-tr" >
-                        
+
                         <h3 class="panel-title display-td" >Payment Details</h3>
-                       
-                        <!-- <div class="display-td" >                            
+
+                        <!-- <div class="display-td" >
                            <img class="img-responsive pull-right" src="">
                         </div> -->
                      </div>
@@ -53,14 +53,15 @@
                         action="{{ route('stripe.post') }}"
                         method="post"
                         class="require-validation"
+                        data-stripe-publishable-key="pk_test_51KptzjJVGEfIZBFzE4g6QrMAyb24DyQ6kn4myub91N8TDOUGS9B91WNpIVSQfAbykO0RRQRFkdJGUul0v3wRqbHl00IQSGh5FZ"
                         data-cc-on-file="false"
-                        data-stripe-publishable-key="pk_live_51KExlDEXquYq4yLxim8z52W3cKGq4D2W4w4edB0h40bvKXPlR5vPFMGXwD8H7tBebsY4mCTM7oSG6YEgpGM0UDfm00XLYv1lMB"
                         id="payment-form">
                         @csrf
+                        {{-- data-stripe-publishable-key="pk_live_51KExlDEXquYq4yLxim8z52W3cKGq4D2W4w4edB0h40bvKXPlR5vPFMGXwD8H7tBebsY4mCTM7oSG6YEgpGM0UDfm00XLYv1lMB" --}}
 
                        <!-- warda's code start -->
                         <div class="online-payment">
-                        
+
                         <hr>
                         <h6>Order Number <span><b>STONY-{{$order_number}}</b></span></h6>
                         <hr>
@@ -68,7 +69,7 @@
                         <hr>
                         <input type="hidden" name="subtotal" value="{{$subtotal}}">
                         <input type="hidden" name="order_no" value="{{$order_number}}">
-                        
+
                         <div class='form-group'>
                            <div class='col-xs-12 form-group required'>
                               <!-- <label class='control-label'>Name on Card</label> -->

@@ -9,5 +9,5 @@ class Order extends Model
 {
     use HasFactory;
     public $table='online_order_product';
-public $guarded=[''];
+    public $guarded=[''];
 }

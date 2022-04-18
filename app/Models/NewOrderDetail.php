@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Models\Return;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Return extends Model
+class NewOrderDetail extends Model
 {
     use HasFactory;
-    public $table='returns';
-    public $guarded=[''];
 }

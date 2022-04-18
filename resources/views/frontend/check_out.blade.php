@@ -38,8 +38,10 @@
                         method="post"
                         class="require-validation"
                         data-cc-on-file="false"
-                        data-stripe-publishable-key="pk_live_51KExlDEXquYq4yLxim8z52W3cKGq4D2W4w4edB0h40bvKXPlR5vPFMGXwD8H7tBebsY4mCTM7oSG6YEgpGM0UDfm00XLYv1lMB"
+                        data-stripe-publishable-key="pk_test_51KptzjJVGEfIZBFzE4g6QrMAyb24DyQ6kn4myub91N8TDOUGS9B91WNpIVSQfAbykO0RRQRFkdJGUul0v3wRqbHl00IQSGh5FZ"
+
                         id="payment-form">
+                        {{-- data-stripe-publishable-key="pk_live_51KExlDEXquYq4yLxim8z52W3cKGq4D2W4w4edB0h40bvKXPlR5vPFMGXwD8H7tBebsY4mCTM7oSG6YEgpGM0UDfm00XLYv1lMB" --}}
                         @csrf
                         <div class="mb-3">
 
@@ -105,7 +107,7 @@
                                 <div class="col-12 col-lg-4  ">
                                     <select name="u_states" class="form-select formselectCheckout form-select-lg mb-3 para16 fw-normal box-shadow-none " required>
                                         <option selected value="United states">United states</option>
-                                       
+
                                     </select>
 
                                 </div>
@@ -239,16 +241,16 @@
                     </form>
 
                     <hr>
-                  
+
                 </div>
 
                 <div class="col-12 col-lg-6 border-start mt-0 bgcolor p-5" style="height: auto;">
-                    
-@php 
+
+@php
 $subtotal = 0;
 @endphp
 @if(session('cart'))
-       
+
             @foreach(session('cart') as $id => $details)
                 @php $subtotal += $details['price'] * $details['item_quantity'] @endphp
                     <div class="row mt-5">
@@ -277,7 +279,7 @@ $subtotal = 0;
 @endforeach
         @endif
 
-                    
+
                     <hr>
 
                     <div class="">
@@ -377,7 +379,7 @@ $subtotal = 0;
 });
 
    </script>
-   
-   
+
+
 
 </html>
